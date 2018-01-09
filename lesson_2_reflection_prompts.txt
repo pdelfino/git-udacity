@@ -68,6 +68,12 @@ o git me mostra exatamente o que eu errei!
 
 --
 
+git diff --staged
+
+esse comando me mostra a diferença entre os arquivos na staging area e no repo
+
+--
+
 How can you use the staging area to make sure you have one commit per logical
 change?
 
