@@ -49,6 +49,9 @@ adiciona determinado arquivo para a STAGING area
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
+é um passo intermediário! permite organizar melhor os commits, para fazer um commit
+a cada passo lógico!
+
 --
 
 How can you use the staging area to make sure you have one commit per logical
