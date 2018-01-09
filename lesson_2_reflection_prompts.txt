@@ -54,6 +54,20 @@ a cada passo lógico!
 
 --
 
+Como reverter um git add se eu ainda não dei commit?
+
+use git reset text_file.txt
+
+--
+
+fiz a alteração, ainda NÃO dei git add
+
+se eu der "git diff", sem parâmetro nenhum
+
+o git me mostra exatamente o que eu errei!
+
+--
+
 How can you use the staging area to make sure you have one commit per logical
 change?
 
