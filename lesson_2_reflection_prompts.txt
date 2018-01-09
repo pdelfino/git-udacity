@@ -1,0 +1,74 @@
+
+command line: ls -a
+
+mostra os arquivos . obscuros também
+
+--
+
+git init
+
+inicia ou CRIA um novo repositório!
+
+--
+
+git init Não faz nenhum commit
+
+deu git init, se der git log, tem zero commits!
+
+--
+
+git status
+
+comando para mostrar quais coisas mudaram!
+
+--
+
+What happens when you initialize a repository? Why do you need to do it?
+
+eu inicio um repositório e começo a trackear a versão dos arquivos que estão nele
+vc precisa indicar pro git que vai começar a traquear!
+
+--
+
+staging area -> te dá mais controle, um passo intermediário, para vc tentar manter
+os commits apenas quando houver alterações lógicas!
+
+--
+
+git add file_1.txt
+git add file_2.txt
+git add file_3.txt
+
+esse comando git add arquivo
+
+adiciona determinado arquivo para a STAGING area
+
+
+--
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+
+--
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+
+--
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+--
+
+How do the diagrams help you visualize the branch structure?
+
+--
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+--
+
+What are the pros and cons of Git's automatic merging vs. always doing merges
+manually?

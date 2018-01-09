@@ -1,0 +1,151 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+Ao invés de olhar manualmente e perder tempo onlhando o que era igual, o diff
+me mostrou exatamente o que está diferente! Assim, concentro esforços.
+
+--
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+Dá para ver exatametente onde um bug foi gerado, ver a evolução do código.  Se
+até o momento X não tinha bug, passava nos testes, e no momento Y, começou a
+quebrar é só ver no histórico e comparar o arquivo no momento X e no momento Y.
+
+--
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+No Git, salvar o arquivo, é algo consciente e subjetivo. Só estou salvando o
+que considero importante.  Se um programa salva automaticamente e parametrizado
+por uma variável objetiva, tipo intervalos de 60 minutos, as versões não estão
+sendo salvas de forma a maximizar importância, por exemplo, pode estar salvando
+quando não houve mudança, ou pior, um monte de coisa importante ser salva
+junta, ao invés, de ser separadinho.
+
+--
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file
+separately?
+
+Porque alguns arquivos são interdependentes! Pensa nos arquivos referentes a
+interface web de uma página...  O CSS dialoga com o index.html e etc...
+
+--
+
+How can you use the commands git log and git diff to view the history of files?
+
+"git log" me mostra a história dos commits, commit id, hora, mensagem...
+
+"git diff id_1 id_2" me mostra a diferença no arquivo entre dois commits
+
+--
+
+How might using version control make you more confident to make changes that
+could break something?
+
+Se eu fizer algo errado, depois eu posso voltar e restaurar o arquivo para
+quando estava funcionando!
+
+comando 
+
+git checkout 1234commit00id
+--
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+Quero usar na IC envolvendo o exame da OAB
+
+--
+
+What's betting cloning the repo and downloading the repo?
+
+Clone significa pegar toda a história dos arquivos! E não só o arquivos!
+
+--
+
+Configurando o bashrc e o git
+
+donwload de vários arquivos - disponíveis na home, depois subir no github
+
+comando para fazer vim editor padrão
+
+git config --global merge.conflictstyle diff3
+
+git config --global push.default upstream
+
+git config --global merge.conflictstyle diff3
+
+--
+
+comandos com output bem semelhante
+
+git diff
+
+diff -u
+
+--
+
+quando vc dá um commit, cria-se um novo commit id, mas o nome do arquivo é 
+o mesmo
+
+git checkout acessa versões antigas do arquivo
+
+--
+
+commit = forma do git salvar uma versão
+
+--
+
+Compare two commits, printing each line that is present in one commit but not the other.
+
+git diff 
+
+will do this. It takes two arguments - the two commit ids to compare.
+
+--
+
+Make a copy of an entire Git repository, including the history, onto your own computer.
+
+git clone 
+
+will do this. It takes one argument - the url of the repository to copy.
+
+--
+
+Temporarily reset all files in a directory to their state at the time of a specific commit.
+
+git checkout
+
+will do this. It takes one argument - the commit ID to restore.
+
+--
+
+Show the commits made in this repository, starting with the most recent.
+
+git log 
+
+will do this. It doesn't take any arguments.
+
+--
+
+git clone != git scp (scp = secure copy)
+
+se eu clono o repositório, pego toda a história de mudanças dos arquivos! 
+Só copiando isso não acontece
+
+se clono ou copio, altero as paradas, não estou alterando no repo original! 
+A não ser que eu faça pull request, aí muda de figura...
+
+--
+
+git diff file-1 file-2
+
+faz diferença a ordem dos parâmetros!
+
+git diff mais-antiga mais-velha
+
