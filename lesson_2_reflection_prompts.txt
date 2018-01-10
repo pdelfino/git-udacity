@@ -149,4 +149,18 @@ das versões tenha o que foi deletado!
 
 working directory -> staging area -> repository
 
+--
+
+git show
+
+mostra a diferença desse commit com o seu pai
+
+--
+
+Restore your files to their state before you started the merge by running
+
+git merge --abort 
+
+--
+
 

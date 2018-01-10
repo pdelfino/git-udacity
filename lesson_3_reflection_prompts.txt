@@ -1,0 +1,15 @@
+vc vai ter dois repos: o remoto e o repo no Github
+
+quando vc dá push, as alterações do remoto vão para o Github
+
+remoto -> Github
+
+quando vc dá pull, as alterações do Github vão para o remoto
+
+remoto <- Github
+
+--
+
+se eu dou push em determinado ramo
+
+todos a história de commits desse ramo vai do repo local para o Github
