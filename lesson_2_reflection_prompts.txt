@@ -43,7 +43,6 @@ esse comando git add arquivo
 
 adiciona determinado arquivo para a STAGING area
 
-
 --
 
 How is the staging area different from the working directory and the repository?
@@ -74,6 +73,14 @@ esse comando me mostra a diferença entre os arquivos na staging area e no repo
 
 --
 
+"git diff" -> compara "working directory" e "staging area"
+
+"git diff --staged" -> compara "staing area" e "commit 1"
+
+"git diff commit_1 commit_2" -> compara "commit_1" e "commit_2"
+
+--
+
 How can you use the staging area to make sure you have one commit per logical
 change?
 
@@ -81,6 +88,25 @@ change?
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+
+--
+
+git branch
+
+me mostra os ramos que foram criados, se tiver só o master, não teve ramificação
+
+--
+
+git log --graph --oneline master other_branch
+
+isso faz comparar, com boa visualização gráfica, dois ramos
+o ramo master, principal, e o ramo other_branch
+
+--
+
+se eu quiser adicionar um ramo
+
+git branch nome_do_novo_ramo
 
 --
 
@@ -95,3 +121,32 @@ the diagram the way we do?
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+
+--
+
+HEAD = current commit 
+
+--
+
+dois domandos em um
+
+git checkout -b new_branch é a mesma coisa que git branch new_branch +
+                                               git checkout new_branch
+--
+
+merge é complicado!
+
+depende do arquivo original
+
+por exemplo, tem um arquivo original
+
+uma pessoa deleta uma parada, a outra mantem
+
+se fizer o merge, na versão final, NÃO vai ter o que foi deletado! Mesmo que uma
+das versões tenha o que foi deletado!
+
+--
+
+working directory -> staging area -> repository
+
+
