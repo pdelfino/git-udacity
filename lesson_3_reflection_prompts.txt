@@ -40,6 +40,19 @@ git log --n1
 
 --
 
+comando para puxar os dados do github para o repositório local
+
+git pull origin master
+
+--
+
+dei fork no github
+faço o git clone com o link
+não preciso de fazer "git remote"
+automaticamente é criado um remoto!
+
+--
+
 When would you want to use a remote repository rather than keeping all your work
 local?
 
