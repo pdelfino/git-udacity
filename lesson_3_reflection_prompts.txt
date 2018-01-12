@@ -53,6 +53,18 @@ automaticamente é criado um remoto!
 
 --
 
+fast forward merge
+
+se vc vai fazer merge de a com b
+
+se a é parte da história de commits de b
+
+isto é, se a é um ancestral de b!
+
+então, vc pode fazer fast forward merge
+
+--
+
 When would you want to use a remote repository rather than keeping all your work
 local?
 
