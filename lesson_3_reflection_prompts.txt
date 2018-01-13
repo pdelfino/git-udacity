@@ -65,6 +65,47 @@ então, vc pode fazer fast forward merge
 
 --
 
+é bom lembrar que 
+
+merge alt pull request
+
+é uma feature do github e não do git!
+
+então, esse comando altera github master branch!
+
+--
+
+quando o comando "git pull origin master" é executado
+
+vc está alterando o local working directory, local staging e local master
+
+--
+
+git commit é um comando que altera o local master branch, vc salva uma versao do repo
+localmente
+
+--
+
+só editei um arquivo, não dei git add, nem git commit
+
+meu bash fica monstrando (master *)
+
+isso singnifica que houve apenas uma alteração no local working directory
+
+nem o staging foi alterado, nem o master branch local, porque não foi "salvo"
+
+com um commit
+
+--
+
+fiz um pull request, mas tem um errinho ortográfico em um dos meu commits
+
+se eu pegar, corrigir o erro de ortografia e se eu fizer PUSH
+
+automaticamente, meu pull request é atualizado!
+
+--
+
 When would you want to use a remote repository rather than keeping all your work
 local?
 
