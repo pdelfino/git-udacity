@@ -47,9 +47,16 @@ git pull origin master
 --
 
 dei fork no github
+
 faço o git clone com o link
+
 não preciso de fazer "git remote"
+
 automaticamente é criado um remoto!
+
+oab-exames, via fork, faço git clone, não precisa de "git remote"
+
+mm-3, não tem fork, estou criando o repo, vou precisar do "git remote"
 
 --
 
@@ -59,7 +66,7 @@ se vc vai fazer merge de a com b
 
 se a é parte da história de commits de b
 
-isto é, se a é um ancestral de b!
+isto é, se a é um ancestral de b,
 
 então, vc pode fazer fast forward merge
 
@@ -81,8 +88,8 @@ vc está alterando o local working directory, local staging e local master
 
 --
 
-git commit é um comando que altera o local master branch, vc salva uma versao do repo
-localmente
+git commit é um comando que altera o local master branch, vc salva uma versao do
+repo localmente
 
 --
 
@@ -100,38 +107,101 @@ com um commit
 
 fiz um pull request, mas tem um errinho ortográfico em um dos meu commits
 
-se eu pegar, corrigir o erro de ortografia e se eu fizer PUSH
+se eu pegar, corrigir o erro de ortografia e se eu fizer PUSH,
 
 automaticamente, meu pull request é atualizado!
+
+--
+
+eu posso fazer git pull origin master
+
+mas tem aquela outra abordagem, qual a diferença?
+
+vejo o que mudou antes de fazer o pull (puxar os dados!)
+
+com 
+
+"git fetch" + "git merge origin/master master"
+
+--
+
+fiz o fork no github
+
+fiz o git clone htttp//link
+
+fiz o git branch, criei um novo ramo
+
+como faço para o novo ramo que eu criei APAREÇA no Github?
+
+faço
+
+"git push origin novo_branch" 
+
+esse é o canal!
 
 --
 
 When would you want to use a remote repository rather than keeping all your work
 local?
 
+ter o trabalho na nuvem é muito útil, por exemplo, te deixa independente de um
+computador específico
+
 --
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
+
+se o pull fosse automático, eu perderia o controle e isso poderia gerar bugs.
+vamos supor que eu estivesse criando uma função via composição de funções com
+uma função que já existia em versões anteriores. Se alguém alterasse a função
+antiga e fosse feito o update automático, ocorreria um bug.
 
 --
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
+fork - comando do github, eu copio todos os arquivos e a história deles do
+repositório de um terceiro e crio o meu repositório no github
+
+clone - eu faço o "download" de todos os arquivos e da história por trás deles
+para a minha máquina
+
+branches - eu crio um ramo, uma espécie de linha de desenvolvimento paralela do
+projeto
+
 --
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
+
+eu posso alterar localmente o arquivo e "brincar localmente" sem comprometer o
+softare que está em produção
 
 --
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
+Talvez fosse menos burocrático. Não teria a curva de aprendizagem do Github e,
+principalmente, do Git. Uma curva que eu só fui resolver agora, no início de
+2018.
+
+Ao mesmo tempo, perderia-se muito mais tempo com comunicação, seria muito mais
+complicado coordenar as coisas. Provavelmente seria necessário estabelecer uma
+série de convenções no time. Essas convenções iriam, provavelmente, convergir
+para o modus operandi como o Git e o Github funcionam...
+
+Sem o git e o github, os projetos tendem a ser muito mais propensos a bugs.
+
 --
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
---
+Quando eu quisesse fazer algo mais experimental, free style, talvez uma
+abordagem arriscada, seria melhor criar um branch. Assim, eu mantenho o master
+atualizado com o repositório oficial.
+
+

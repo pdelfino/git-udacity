@@ -3,6 +3,7 @@ was introduced?
 
 Ao invés de olhar manualmente e perder tempo onlhando o que era igual, o diff
 me mostrou exatamente o que está diferente! Assim, concentro esforços.
+O computador é bem melhor para checar caracteres do que a gente...
 
 --
 
@@ -12,6 +13,8 @@ efficient programmer in the long term?
 Dá para ver exatametente onde um bug foi gerado, ver a evolução do código.  Se
 até o momento X não tinha bug, passava nos testes, e no momento Y, começou a
 quebrar é só ver no histórico e comparar o arquivo no momento X e no momento Y.
+Resolver bugs é parte importante do trabalho de um programador, a história de
+um arquivo ajuda a entender os seus bugs. 
 
 --
 
@@ -34,6 +37,8 @@ separately?
 
 Porque alguns arquivos são interdependentes! Pensa nos arquivos referentes a
 interface web de uma página...  O CSS dialoga com o index.html e etc...
+obs: eu não entendo nada de front-end no momento, não sei como funciona essa
+interação, mas tenho certeza que ela existe!
 
 --
 
@@ -53,16 +58,18 @@ quando estava funcionando!
 
 comando 
 
-git checkout 1234commit00id
+git checkout 1234commit00id --
+
 --
 
 Now that you have your workspace set up, what do you want to try using Git for?
 
-Quero usar na IC envolvendo o exame da OAB
+Quero usar na IC envolvendo o exame da OAB, um projeto open-source e que envolve
+rotineiramente 3 desenvolvedores.
 
 --
 
-What's betting cloning the repo and downloading the repo?
+What's the difference between cloning the repo and downloading the repo?
 
 Clone significa pegar toda a história dos arquivos! E não só o arquivos!
 
@@ -86,12 +93,12 @@ comandos com output bem semelhante
 
 git diff
 
-diff -u
+git diff -u
 
 --
 
-quando vc dá um commit, cria-se um novo commit id, mas o nome do arquivo é 
-o mesmo
+quando vc dá um commit, cria-se um novo commit id, mas o nome do arquivo é o
+mesmo
 
 git checkout acessa versões antigas do arquivo
 
@@ -101,7 +108,8 @@ commit = forma do git salvar uma versão
 
 --
 
-Compare two commits, printing each line that is present in one commit but not the other.
+Compare two commits, printing each line that is present in one commit but not
+the other.
 
 git diff 
 
@@ -109,15 +117,17 @@ will do this. It takes two arguments - the two commit ids to compare.
 
 --
 
-Make a copy of an entire Git repository, including the history, onto your own computer.
+Make a copy of an entire Git repository, including the history, onto your own
+computer.
 
-git clone 
+git clone link-url
 
 will do this. It takes one argument - the url of the repository to copy.
 
 --
 
-Temporarily reset all files in a directory to their state at the time of a specific commit.
+Temporarily reset all files in a directory to their state at the time of a
+specific commit.
 
 git checkout
 
@@ -135,17 +145,29 @@ will do this. It doesn't take any arguments.
 
 git clone != git scp (scp = secure copy)
 
-se eu clono o repositório, pego toda a história de mudanças dos arquivos! 
-Só copiando isso não acontece
+se eu clono o repositório, pego toda a história de mudanças dos arquivos!  Só
+copiando isso não acontece
 
-se clono ou copio, altero as paradas, não estou alterando no repo original! 
-A não ser que eu faça pull request, aí muda de figura...
+se clono ou copio, altero as paradas, não estou alterando no repo original!  A
+não ser que eu faça push e depois pull request, aí muda de figura...
 
 --
 
 git diff file-1 file-2
 
-faz diferença a ordem dos parâmetros!
+faz diferença a ordem dos parâmetro
 
-git diff mais-antiga mais-velha
+o comando
+
+git diff <x> <x+∆x>
+
+me retorna ∆x
+
+se eu inverter a ordem
+
+git diff <x+∆x> <x>
+
+vou ter -∆x
+
+
 

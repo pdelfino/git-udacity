@@ -1,55 +1,57 @@
 
 command line: ls -a
 
-mostra os arquivos . obscuros também
+mostra os arquivos "." obscuros também
 
 --
 
 git init
 
-inicia ou CRIA um novo repositório!
+inicia ou CRIA um novo repositório
 
 --
 
 git init Não faz nenhum commit
 
-deu git init, se der git log, tem zero commits!
+deu git init, se der git log, tem zero commits
 
 --
 
 git status
 
-comando para mostrar quais coisas mudaram!
+comando para mostrar quais coisas mudaram
 
 --
 
 What happens when you initialize a repository? Why do you need to do it?
 
-eu inicio um repositório e começo a trackear a versão dos arquivos que estão nele
-vc precisa indicar pro git que vai começar a traquear!
+eu inicio um repositório e começo a trackear a versão dos arquivos que estão
+nele vc precisa indicar pro git que vai começar a traquear!
 
 --
 
-staging area -> te dá mais controle, um passo intermediário, para vc tentar manter
-os commits apenas quando houver alterações lógicas!
+staging area -> te dá mais controle, um passo intermediário, para vc tentar
+manter os commits apenas quando houver alterações lógicas
 
 --
 
-git add file_1.txt
-git add file_2.txt
-git add file_3.txt
+git add file_1.txt git add file_2.txt git add file_3.txt
 
 esse comando git add arquivo
 
 adiciona determinado arquivo para a STAGING area
+
+git add -u
+
+essa seria a forma de adicionar vários de uma vez
 
 --
 
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
-é um passo intermediário! permite organizar melhor os commits, para fazer um commit
-a cada passo lógico!
+é um passo intermediário, permite organizar melhor os commits, para fazer um
+commit a cada passo lógico
 
 --
 
@@ -63,35 +65,46 @@ fiz a alteração, ainda NÃO dei git add
 
 se eu der "git diff", sem parâmetro nenhum
 
-o git me mostra exatamente o que eu errei!
+o git me mostra exatamente o que eu errei
 
 --
 
 git diff --staged
 
-esse comando me mostra a diferença entre os arquivos na staging area e no repo
+esse comando me mostra a diferença entre os arquivos na staging area e no
+working directory
 
 --
 
-"git diff" -> compara "working directory" e "staging area"
+"git diff" compara "working directory" e "staging area"
 
-"git diff --staged" -> compara "staing area" e "commit 1"
+"git diff --staged" compara "staing area" e "commit 1"
 
-"git diff commit_1 commit_2" -> compara "commit_1" e "commit_2"
+"git diff commit_1 commit_2" compara "commit_1" e "commit_2"
 
 --
 
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+Eu posso ir acumulando alterações dentro de um mesmo contexto na staging area e
+quando acabar alterações nesse sentido, faço o git commit com uma mensagem
+adequada se não tivesse staging, eu teria que fazer commit toda hora...
+
+é um pouco o que acontece no GitHub, já que na versão com interface não tem esse
+passo intermediário
+
 --
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
---
+Branches são especialmente legais quando quero ter um espaço de
+experimentalismo, mantenho o master local up-to-date com o master no github do
+projeto, e crio um ramo paralelo, por exemplo, para desenvolver uma nova
+funcionalidade
 
-git branch
+-- ' git branch
 
 me mostra os ramos que foram criados, se tiver só o master, não teve ramificação
 
@@ -99,8 +112,8 @@ me mostra os ramos que foram criados, se tiver só o master, não teve ramifica�
 
 git log --graph --oneline master other_branch
 
-isso faz comparar, com boa visualização gráfica, dois ramos
-o ramo master, principal, e o ramo other_branch
+esse comando permite comparar, com boa visualização gráfica, dois ramos o ramo
+master, principal, e o ramo other_branch
 
 --
 
@@ -112,15 +125,25 @@ git branch nome_do_novo_ramo
 
 How do the diagrams help you visualize the branch structure?
 
+essa pergunta já inclui no enunciado a resposta, a vantagem do diagrama é
+oferecer uma nova forma de compreender o fenômeno, ao invés de um aglutinado de
+mensagens de texto, o diagrama sintetiza o que está acontecendo com uma imagem
+
 --
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+O merge de dois ramos significa criar um commit_id com dois ponteiros, cada um
+para a cabeça de um ramo
+
 --
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+
+Com o merge manual é possível entender melhor os conflitos e resolvê-los
+manualmente
 
 --
 
@@ -130,9 +153,8 @@ HEAD = current commit
 
 dois domandos em um
 
-git checkout -b new_branch é a mesma coisa que git branch new_branch +
-                                               git checkout new_branch
---
+git checkout -b new_branch é a mesma coisa que git branch new_branch + git
+checkout new_branch --
 
 merge é complicado!
 
@@ -140,7 +162,7 @@ depende do arquivo original
 
 por exemplo, tem um arquivo original
 
-uma pessoa deleta uma parada, a outra mantem
+uma pessoa deleta uma parada, a outra mantém
 
 se fizer o merge, na versão final, NÃO vai ter o que foi deletado! Mesmo que uma
 das versões tenha o que foi deletado!
@@ -160,7 +182,4 @@ mostra a diferença desse commit com o seu pai
 Restore your files to their state before you started the merge by running
 
 git merge --abort 
-
---
-
 
