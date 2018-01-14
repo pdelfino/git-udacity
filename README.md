@@ -1,4 +1,4 @@
-#My Git Workspace
+## My Git Workspace
 
 My Git Workspace has a custom prompt. My name is in purple and the directory
 name is in blue.  If I change directory (cd) to a Git repository, the prompt
