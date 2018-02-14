@@ -50,3 +50,16 @@ git config --global push.default
 upstream git config --global merge.conflictstyle diff3
 ```
 
+
+Reflections
+=== 
+
+During the course  ["How to use Git and Github"](https://br.udacity.com/course/how-to-use-git-and-github--ud775) on Udacity,
+professors encouraged us to write reflections about the classes.
+Hence, in this repo there are three files with reflections and shortcuts for git:
+
++ [first](https://github.com/pdelfino/git-udacity/blob/master/lesson_1_reflection_prompts.txt)
+
++ [second](https://github.com/pdelfino/git-udacity/blob/master/lesson_2_reflection_prompts.txt)
+
++ [third](https://github.com/pdelfino/git-udacity/blob/master/lesson_3_reflection_prompts.txt)
