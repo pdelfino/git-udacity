@@ -56,7 +56,8 @@ Reflections
 
 During the course  ["How to use Git and Github"](https://br.udacity.com/course/how-to-use-git-and-github--ud775) on Udacity,
 professors encouraged us to write reflections about the classes.
-Hence, in this repo there are three files with reflections and shortcuts for git:
+
+Here you can check out three files with my reflections and some shortcuts for git. Sorry for the draft style:
 
 + [first](https://github.com/pdelfino/git-udacity/blob/master/lesson_1_reflection_prompts.txt)
 
