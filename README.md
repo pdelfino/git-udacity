@@ -36,7 +36,7 @@ mentioned are available [here](https://github.com/pdelfino/git-udacity)):
 + Save ```git-prompt.sh``` in your home directory with the name 
 ```git-prompt.sh```;  and,
 
-+ Download ```bash\_profile\_course```.
++ Insert ```bash\_profile\_course``` on `.bashrc`.
 
 I am using ```Linux/Ubuntu```, so I needed to to name this file ```.bashrc``` 
 instead of ```bash_profile```.
