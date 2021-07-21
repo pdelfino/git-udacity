@@ -36,20 +36,35 @@ mentioned are available [here](https://github.com/pdelfino/git-udacity)):
 + Save ```git-prompt.sh``` in your home directory with the name 
 ```git-prompt.sh```;  and,
 
-+ Insert ```bash\_profile\_course``` on `.bashrc`.
++ Insert the following on `.bashrc`:
 
-I am using ```Linux/Ubuntu```, so I needed to to name this file ```.bashrc``` 
-instead of ```bash_profile```.
+```bash
+# Enable tab completion
+source ~/git-completion.bash
 
-Now, run the following commands (vim is my favorite text editor, you may need
+# colors!
+green="\[\033[0;32m\]"
+blue="\[\033[0;34m\]"
+purple="\[\033[0;35m\]"
+reset="\[\033[0m\]"
+
+# Change command prompt
+source ~/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds git-related stuff
+# '\W' adds the name of the current directory
+export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
+```
+
+Now, run the following commands (emacs is my favorite text editor, you may need
 to adapt the first command):
 
 ```bash 
-git config --global core.editor "vim" 
+git config --global core.editor "emacs" 
 git config --global push.default
 upstream git config --global merge.conflictstyle diff3
 ```
-
 
 Reflections
 === 
