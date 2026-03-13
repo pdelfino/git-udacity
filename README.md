@@ -1,81 +1,72 @@
-My Git Workspace
-===
+# Git and GitHub -- Udacity Course
 
-My Git Workspace has a ```custom prompt```. 
+![The Ancient of Days](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Europe_a_Prophecy_copy_K_plate_01.jpg/700px-Europe_a_Prophecy_copy_K_plate_01.jpg)
 
-+ User name is in purple;
+*"The Ancient of Days" (1794) by William Blake — [Wikipedia](https://en.wikipedia.org/wiki/The_Ancient_of_Days)*
 
-+ The directory name is in blue; and,
+Custom Git workspace configuration and learning reflections from Udacity's *How to Use Git and GitHub* course.
 
-+ it has tab completion set up for git commands.
+## About
 
-![Alt Text](https://media.giphy.com/media/wKcfPVI7QXUaqQzgfp/giphy.gif)
+Materials from [How to Use Git and GitHub](https://br.udacity.com/course/how-to-use-git-and-github--ud775) on Udacity. This repo includes a polished Git workspace setup with a custom prompt, tab completion, and dirty-state indicators, along with reflections written during the course.
 
+## Custom Git Workspace
 
-Visualize the workflow
-===
+![Custom Git prompt](https://media.giphy.com/media/wKcfPVI7QXUaqQzgfp/giphy.gif)
 
-If I change something without adding to the staging area, the prompt will show a ```*```
+**Features:**
 
-```pedro (master *)```
+- Username displayed in purple
+- Current directory in blue
+- Git branch name in the prompt
+- Tab completion for Git commands
+- Dirty-state indicators:
+  - `*` -- unstaged changes
+  - `+` -- staged but uncommitted changes
 
-If I change something without comitting, the prompt will show a ```+```
+## Setup Instructions
 
-
-```pedro (master +)```
-
-Mimic me
-===
-
-In order to have my Workspace follow the instructions bellow (the three files
-mentioned are available [here](https://github.com/pdelfino/git-udacity)):
-
-+ Save ```git-completion.bash``` file in your home directory with the name
-```git-completion.bash```;
-
-+ Save ```git-prompt.sh``` in your home directory with the name 
-```git-prompt.sh```;  and,
-
-+ Insert the following on `.bashrc`:
+1. Save `git-completion.bash` in your home directory.
+2. Save `git-prompt.sh` in your home directory.
+3. Add the following to your `.bashrc`:
 
 ```bash
 # Enable tab completion
 source ~/git-completion.bash
 
-# colors!
+# Colors
 green="\[\033[0;32m\]"
 blue="\[\033[0;34m\]"
 purple="\[\033[0;35m\]"
 reset="\[\033[0m\]"
 
-# Change command prompt
+# Custom prompt with Git integration
 source ~/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
-# '\u' adds the name of the current user to the prompt
-# '\$(__git_ps1)' adds git-related stuff
-# '\W' adds the name of the current directory
 export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
 ```
 
-Now, run the following commands (emacs is my favorite text editor, you may need
-to adapt the first command):
+4. Configure Git defaults:
 
-```bash 
-git config --global core.editor "emacs" 
-git config --global push.default
-upstream git config --global merge.conflictstyle diff3
+```bash
+git config --global core.editor "emacs"   # or your preferred editor
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
 ```
 
-Reflections
-=== 
+## Course Reflections
 
-During the course  ["How to use Git and Github"](https://br.udacity.com/course/how-to-use-git-and-github--ud775) on Udacity,
-professors encouraged us to write reflections about the classes.
+Written reflections on version control concepts, completed as part of the course exercises:
 
-Here you can check out three files with my reflections and some shortcuts for git. Sorry for the draft style:
+- [Lesson 1](https://github.com/pdelfino/git-udacity/blob/master/lesson_1_reflection_prompts.txt) -- diffs, commit history, file versioning
+- [Lesson 2](https://github.com/pdelfino/git-udacity/blob/master/lesson_2_reflection_prompts.txt) -- branching and merging
+- [Lesson 3](https://github.com/pdelfino/git-udacity/blob/master/lesson_3_reflection_prompts.txt) -- collaboration with GitHub
 
-+ [first](https://github.com/pdelfino/git-udacity/blob/master/lesson_1_reflection_prompts.txt)
+## Tech Stack
 
-+ [second](https://github.com/pdelfino/git-udacity/blob/master/lesson_2_reflection_prompts.txt)
+- **Shell:** Bash
+- **Tools:** Git, GitHub
 
-+ [third](https://github.com/pdelfino/git-udacity/blob/master/lesson_3_reflection_prompts.txt)
+## Notes
+
+- Reflections are written in Portuguese.
