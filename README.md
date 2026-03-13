@@ -1,6 +1,6 @@
 # Git and GitHub -- Udacity Course
 
-![The Ancient of Days](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Europe_a_Prophecy_copy_K_plate_01.jpg/960px-Europe_a_Prophecy_copy_K_plate_01.jpg)
+![The Ancient of Days](./painting.jpg)
 
 *"The Ancient of Days" (1794) by William Blake — [Wikipedia](https://en.wikipedia.org/wiki/The_Ancient_of_Days)*
 
